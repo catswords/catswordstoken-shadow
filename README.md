@@ -2,8 +2,8 @@
 CatswordsToken Shadow is PoC, integrate to other blockchain networks
 
 ## Requirements (pip install x)
-- flask
-- base58
+- flask (Python module)
+- base58 (Python module)
 
 ## Step by step
 1. python server.py
