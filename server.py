@@ -43,7 +43,7 @@ def mine():
 
     payment_is_available = paymentUtils.is_available()
     if(payment_is_available == True):
-        payment_id = paymentUtils.pay(block_fee)
+        payment_id = paymentUtils.pay(last_fee)
         payment_destination_address = paymentUtils.get_destination_address()
         if paymentUtils.check_payment_id(payment_id):
             blockchain.new_transaction(
