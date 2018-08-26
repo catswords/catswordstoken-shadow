@@ -1,6 +1,10 @@
 # catswordstoken-shadow
 Catswordstoken Shadow is PoC, integrate to other blockchain networks
 
+## requirements (pip install x)
+- flask
+- base58
+
 ## step by step
 1. python server.py
 2. python test_transaction.py
