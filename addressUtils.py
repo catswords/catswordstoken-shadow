@@ -3,7 +3,7 @@
 __filename__ = 'addressUtils.py'
 __author__ = 'CatswordsToken Shadow'
 __copyright__ = 'Copyright 2018, CatswordsToken'
-__credits__ = ['CWDS', 'GNH']
+__credits__ = ['CWDS', 'GNH', 'YHY']
 __license__ = 'GPL'
 __version__ = '1.0.1'
 __maintainer__ = 'Go Namhyeon'
