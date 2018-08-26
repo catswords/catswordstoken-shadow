@@ -1,5 +1,5 @@
 # catswordstoken-shadow
-Catswordstoken Shadow is PoC, integrate to other blockchain networks
+CatswordsToken Shadow is PoC, integrate to other blockchain networks
 
 ## requirements (pip install x)
 - flask
