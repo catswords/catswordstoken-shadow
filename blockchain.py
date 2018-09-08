@@ -15,6 +15,7 @@ import json
 from time import time
 from uuid import uuid4
 import pickle
+import random
 
 class Blockchain(object):
 
@@ -67,12 +68,27 @@ class Blockchain(object):
 
         return block
 
-    def new_transaction(self, sender, recipient, amount, data={}):
+    def new_transcation_hash(self):
+        return bytearray(random.getrandbits(8) for _ in xrange(256))
+
+    def new_transaction(self, sender, recipient, amount):
         self.current_transactions.append({
-            'sender': sender,
-            'recipient': recipient,
-            'amount': amount,
-            'data': data
+            'inputs': {
+                'prev': '',
+                'commands': ['sig', 'pubkey', 'pubkeyhash', 'pubkeyhash', 'verify']
+            },
+            'outputs': {
+                'self' self.new_transaction_hash(),
+                'exports'': [{
+                    'commands': ['sig', 'pubkey', 'pubkeyhash', 'pubkeyhash', 'verify'],
+                    'address': recipient,
+                    'amount': amount
+                }, {
+                    'commands': ['sig', 'pubkey', 'pubkeyhash', 'pubkeyhash', 'verify'],
+                    'address': sender,
+                    'amount': amount
+                }]
+            }
         })
 
         return self.last_block['index'] + 1

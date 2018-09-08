@@ -90,15 +90,11 @@ def mine():
 def new_transaction():
     values = request.get_json()
 
-    required = ['sender', 'recipient', 'amount', 'comment']
+    required = ['sender', 'recipient', 'amount']
     if not all(k in values for k in required):
         return 'missing values', 400
 
-    data = {
-        'comment': values['comment']
-    }
-
-    index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'], data)
+    index = blockchain.new_transaction(values['sender'], values['recipient'], values['amount'])
 
     response = {'message': 'Transaction will be added to Block {0}'.format(index)}
 
