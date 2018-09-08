@@ -78,7 +78,7 @@ class Blockchain(object):
                 'commands': ['sig', 'pubkey', 'pubkeyhash', 'pubkeyhash', 'verify']
             },
             'outputs': {
-                'self' self.new_transaction_hash(),
+                'self': self.new_transaction_hash(),
                 'exports'': [{
                     'commands': ['sig', 'pubkey', 'pubkeyhash', 'pubkeyhash', 'verify'],
                     'address': recipient,
